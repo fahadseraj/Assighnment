@@ -12,16 +12,16 @@ mobile_data = {
 }
 
 get_data = mobile_data.get('data')
-get_item = get_data[1]
-get_name = get_item.get('name')
+get_item = get_data[3]
+get_mobile_name = get_item.get('name')
 get_price = get_item.get('price')
 get_origin = get_item.get('made')
 get_price_rate = get_price[0:4]
 get_price_usd = get_price[4:]
-get_price_bdt = get_price_usd.replace("USD","BDT")
-price_bd = float(get_price_rate) * 103.25
-price_bd_round = round(price_bd)
-template = f'You Can Choose {get_name}. Which Price IS {get_price} \nAnd In BDT Price Will be {price_bd_round} {get_price_bdt}' \
+get_bdt_str = get_price_usd.replace("USD","BDT")
+get_price_bdt = float(get_price_rate) * 103.25
+get_price_bdt_round = round(get_price_bdt)
+template = f'You Can Choose {get_mobile_name}. Which Price IS {get_price} \nAnd In BD Price Will be {get_price_bdt_round}{get_bdt_str}' \
            f'\nAND Country Of Origin {get_origin} '
 
 print(template)
