@@ -25,3 +25,11 @@ template = f'You Can Choose {get_mobile_name}. Which Price IS {get_price} \nAnd 
            f'\nAND Country Of Origin {get_origin} '
 
 print(template)
+
+
+
+
+
+
+
+
